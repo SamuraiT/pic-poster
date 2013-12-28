@@ -35,9 +35,11 @@ class Photographer(object):
 
 def main(*argv):
     Rpi = Photographer()
-    Rpi.tweet(comment = argv[0][1],
-            hastag = argv[0][2])
-
+    if len(argv) == 3:
+        Rpi.tweet(comment = argv[0][1],
+                hastag = argv[0][2])
+    elif len(argv) == 2:
+        Rpi.tweet(comment = argv[0][1])
 
 if __name__ == '__main__':
     main(sys.argv)
