@@ -4,9 +4,10 @@
 <form action="{{ url_for('tweet') }}" method=post class=tweet-pic>
 <dl>
 <dt>Comment:
-<dd><textarea name=text rows=5 size=140 cols=20 name=comment></textarea>
+<dd><textarea name=text rows=5 size=140 cols=70 name=comment placeholder='comment something :)'></textarea>
 <dt>Hastag:
-<dd><input type=text size=20 name=hastag>
+<dd><input type=text size=20 name=hastag 
+placeholder="#asahikawa_python">
 <dd><input type=submit value=tweet>
 </dl>
 </form>

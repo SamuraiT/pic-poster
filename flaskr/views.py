@@ -8,10 +8,10 @@ def index():
 @app.route('/tweet/',methods = ['POST'])
 def tweet():
     if request.method == 'POST':
-        if not request.method['hastag']:
-            #tweet with default hastag
-        print 'you tweet'
-        flash('Congrats! you tweeted !')
+        if not request.form['hastag']:
+            flash('Cheers ! you tweeted using #asahikawa_python')
+        else:
+            flash('Congrats! you tweeted !')
         # tweet
     return redirect(url_for('index'))
 
