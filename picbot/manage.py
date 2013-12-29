@@ -28,7 +28,7 @@ class Photographer(object):
                     hastag = hastag
                     ))
 
-    def tweet(self,comment,hastag = u'#asahikawa_python',
+    def tweet(self,comment=u'',hastag = u'#asahikawa_python',
             filename = 'pic.jpg'):
         self.take_a_pic(filename)
         self.post_a_pic(comment,hastag)

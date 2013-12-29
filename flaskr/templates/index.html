@@ -1,15 +1,14 @@
-{% extends 'base.html'%}
+{% extends "base.html" %}
 
 {% block body%}
 <form action="{{ url_for('tweet') }}" method=post class=tweet-pic>
 <dl>
 <dt>Comment:
-<dd><textarea name=text rows=5 size=140 cols=20></textarea>
+<dd><textarea name=text rows=5 size=140 cols=20 name=comment></textarea>
 <dt>Hastag:
-<dd><input type=text size=20 name=title>
+<dd><input type=text size=20 name=hastag>
 <dd><input type=submit value=tweet>
 </dl>
 </form>
 
-
-{% endblock body %}
+{% endblock  %}
