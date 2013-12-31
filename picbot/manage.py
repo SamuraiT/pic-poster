@@ -5,6 +5,12 @@ from pygame.locals import *
 from picbot.settings import api,HASH_TAG
 
 import sys
+class OverChar(Exception):
+    def __str__(self):
+        return ('your tweet is beyond 140 characters which'
+            ' is the limitation of tweet.\n please tweet again')
+
+
 class Photographer(object):
     def __init__(self,camera_port = "/dev/video0"):
         pygame.init()
@@ -21,9 +27,7 @@ class Photographer(object):
     def post_a_pic(self,comment,hashtag = HASH_TAG):
         photo = open(self.filename,'rb')
         if len(comment+hashtag) > 139:
-            print 'your tweet is beyond 140 characters which'
-            ' is the limitation of tweet.\n please tweet again'
-            return None
+            raise OverChar
         api.update_status_with_media(media=photo,
                 status=u'{comment} {hashtag}'.format(
                     comment = comment,

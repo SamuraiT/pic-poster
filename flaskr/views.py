@@ -1,6 +1,6 @@
 from flask import request, redirect, url_for, render_template, flash
 from flaskr  import app
-from picbot.manage import Photographer
+from picbot.manage import Photographer,OverChar,HASH_TAG
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -11,15 +11,28 @@ def tweet():
         raspi = Photographer()
         hashtag = request.form['hashtag']
         comment = request.form['comment']
-        if not hashtag:
+        post_a_pic(raspi,comment,hashtag)
+    return redirect(url_for('index'))
+
+def post_a_pic(raspi,comment=u'',hashtag=HASH_TAG):
+    if not hashtag:
+        try:
             raspi.tweet(comment)
             flash('Cheers ! you tweeted using #asahikawa_python')
-        elif not '#' in hashtag:
+        except OverChar as e:
+            flash(str(e))
+    elif not '#' in hashtag:
+        try:
             raspi.tweet(comment,('#'+hashtag))
-            #tweet('#'+hashtag)
-            flash('Congrats! you tweeted using #{hashtag}!'.format(
+            flash('Congrats! you tweeted'
+                ' using #{hashtag}!'.format(
                 hashtag = hashtag))
-        else:
+        except OverChar as e:
+            flash(str(e))
+    else:
+        try:
             raspi.tweet(comment,hashtag)
             flash('Congrats! you tweeted !')
-    return redirect(url_for('index'))
+        except OverChar as e:
+            flash( str(e) )
+
