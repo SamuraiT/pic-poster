@@ -50,7 +50,7 @@ To install pygame you need to install a lot of dependcy before
 Also the working enviornments is supported only:
 * Under Debian/ubuntu os.
 
-** Note **
+**Note**
 
 `settings-sample.py` is literally a sample so it doesn't not contain
 settings you need for tweeting.
