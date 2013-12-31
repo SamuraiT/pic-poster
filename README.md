@@ -9,17 +9,10 @@ Table of contents
 * [How to Use](#How to use)
 * [To Developer](#To Developer)
 * [License](#License)
-Note
------
-`settings-sample.py` is literally a sample so it doesn't not contain
-settings you need for tweeting.
-
-Create a file called `settings.py` and fill out the missing
-fields.
-This file should not be added to source control. It should be in `.gitignore` file.
 
 How to use
 ----------
+First, move to this `pic-poster` directory.
 To run this application, command this:`python manage.py` then 
 it will say this:
 ```python
@@ -55,6 +48,15 @@ To install pygame you need to install a lot of dependcy before
 
 Also the working enviornments is supported only:
 * Under Debian/ubuntu os.
+
+** Note **
+`settings-sample.py` is literally a sample so it doesn't not contain
+settings you need for tweeting.
+
+Create a file called `settings.py` and fill out the missing
+fields.
+This file should not be added to source control. It should be in `.gitignore` file.
+
 
 License
 -------
