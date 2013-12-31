@@ -2,13 +2,7 @@ Description
 ------------
 This is a twitter bot that will post pictures and is supposed being used in an event.
 
-Table of contents
------------------
 * [日本語ドキュメント](doc/ja/README.md)
-* [Note](#Note)
-* [How to Use](#How to use)
-* [To Developer](#To Developer)
-* [License](#License)
 
 How to use
 ----------
@@ -23,6 +17,7 @@ it will say this:
 
 and when you hit url:`http://raspberrypi's-ip-address:5000`,
 this page will appear:
+
 ![index](doc/img/index.png)
 
 Here, you can write comments less than 140 charcter and 
@@ -36,22 +31,27 @@ To Developer
 ------------
 to install dependcy(third-pary of python module),
 you need to
+
 ```pip install -r requirements-flask.txt```
+
 by this you will install dependcy to run web application.
 
 and 
+
 ```pip install -r requirements-picbot.txt```
 
 by this you will install dependcy for taking 
 pictures and tweet.
 In this, pygame is included.
 To install pygame you need to install a lot of dependcy before
+
 `pip install ...`
 
 Also the working enviornments is supported only:
 * Under Debian/ubuntu os.
 
 ** Note **
+
 `settings-sample.py` is literally a sample so it doesn't not contain
 settings you need for tweeting.
 
