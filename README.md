@@ -7,7 +7,9 @@ This is a twitter bot that will post pictures and is supposed being used in an e
 How to use
 ----------
 First, move to this `pic-poster` directory.
+
 To run this application, command this:`python manage.py` then 
+
 it will say this:
 
 ```python
@@ -21,7 +23,9 @@ this page will appear:
 ![index](doc/img/index.png)
 
 Here, you can write comments less than 140 charcter and 
+
 make hashtag or ,if you don't make,
+
 the default hashtag:`#asahikawa_python` will be taken place.
 
 Then raspi take a photo and 
@@ -42,7 +46,9 @@ and
 
 by this you will install dependcy for taking 
 pictures and tweet.
+
 In this, pygame is included.
+
 To install pygame you need to install a lot of dependcy before
 
 `pip install ...`
@@ -57,6 +63,7 @@ settings you need for tweeting.
 
 Create a file called `settings.py` and fill out the missing
 fields.
+
 This file should not be added to source control. It should be in `.gitignore` file.
 
 
