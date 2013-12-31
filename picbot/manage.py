@@ -15,6 +15,7 @@ class Photographer(object):
         image = self.cam.get_image()
         pygame.image.save(image,filename)
         self.filename = filename
+        self.cam.stop()
 
     def post_a_pic(self,comment,hastag = u'#asahikawa_python'):
         photo = open(self.filename,'rb')
