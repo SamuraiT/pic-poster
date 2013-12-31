@@ -15,10 +15,12 @@ How to use
 First, move to this `pic-poster` directory.
 To run this application, command this:`python manage.py` then 
 it will say this:
+
 ```python
 * Running on http://0.0.0.0:5000/
 * Restarting with reloader
 ```
+
 and when you hit url:`http://raspberrypi's-ip-address:5000`,
 this page will appear:
 ![index](doc/img/index.png)
