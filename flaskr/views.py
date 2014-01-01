@@ -3,7 +3,8 @@ from flaskr  import app
 from picbot.manage import Photographer,OverChar,HASH_TAG
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',
+                            hashtag_placeholder = HASH_TAG)
 
 @app.route('/tweet/',methods = ['POST'])
 def tweet():
